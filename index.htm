@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Kumar - Resume & Business</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #28a745;
+        }
+
+        a:hover {
+            color: #218838;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: #28a745;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        /* About Me Section */
+        .about-me {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .about-me h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #28a745;
+        }
+
+        .about-me p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Resume Section */
+        .resume {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .resume h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #28a745;
+        }
+
+        .resume h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .resume ul {
+            list-style-type: none;
+            margin-left: 20px;
+        }
+
+        .resume ul li {
+            margin-bottom: 10px;
+        }
+
+        .resume ul li::before {
+            content: "▹";
+            color: #28a745;
+            margin-right: 10px;
+        }
+
+        /* Business Section */
+        .business {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .business h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #28a745;
+        }
+
+        .business h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .business p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .portfolio h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #28a745;
+        }
+
+        .portfolio .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .portfolio .project-card {
+            flex: 1 1 calc(33.333% - 40px);
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .portfolio .project-card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .portfolio .project-card h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .portfolio .project-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #28a745;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact input,
+        .contact textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact button {
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background: #218838;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #28a745;
+            color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .about-me h2,
+            .resume h2,
+            .business h2,
+            .portfolio h2,
+            .contact h2 {
+                font-size: 1.8rem;
+            }
+
+            .resume h3,
+            .business h3 {
+                font-size: 1.3rem;
+            }
+
+            .portfolio .project-card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Gaurav Kumar</h1>
+            <p>Frontend Developer | Entrepreneur | GC Software Founder</p>
+        </header>
+
+        <!-- About Me Section -->
+        <section class="about-me">
+            <h2>About Me</h2>
+            <p>
+                Passionate Frontend Developer with 1 year of experience building responsive and user-friendly web
+                applications. Proficient in HTML, CSS, and JavaScript, with expertise in modern frontend frameworks
+                such as Angular and Node.js. Dedicated to delivering high-quality code and exceptional user experiences.
+            </p>
+            <p>
+                I am also the founder of <strong>GC Software</strong>, a company specializing in website development,
+                app creation, school management systems, factory management systems, and personal blogs. Additionally,
+                I collaborate with <strong>Sang Hospitality</strong> to provide innovative solutions for the hospitality industry.
+            </p>
+        </section>
+
+        <!-- Resume Section -->
+        <section class="resume">
+            <h2>Resume</h2>
+
+            <!-- Experience -->
+            <h3>Experience</h3>
+            <ul>
+                <li><strong>Angular Developer & UI Designer</strong> - Ezivera Technologies (Feb 2022 - Mar 2023)</li>
+                <li><strong>Founder</strong> - GC Software (Present)</li>
+                <li><strong>Collaborator</strong> - Sang Hospitality (Present)</li>
+            </ul>
+
+            <!-- Education -->
+            <h3>Education</h3>
+            <ul>
+                <li><strong>BCA</strong> - IGNOU Darbhanga (Appeared)</li>
+                <li><strong>Diploma in Front-End Development</strong> - Ezivera Computer & Professional Education</li>
+            </ul>
+
+            <!-- Skills -->
+            <h3>Skills</h3>
+            <ul>
+                <li>Angular, JavaScript, TypeScript</li>
+                <li>HTML, CSS, SCSS, Bootstrap</li>
+                <li>UI/UX Design, Adobe Photoshop</li>
+                <li>Git, JIRA, VS Code</li>
+            </ul>
+        </section>
+
+        <!-- Business Section -->
+        <section class="business">
+            <h2>My Businesses</h2>
+
+            <!-- GC Software -->
+            <h3>GC Software</h3>
+            <p>
+                GC Software specializes in creating custom websites, mobile apps, school management systems, factory
+                management systems, and personal blogs. We focus on delivering scalable and efficient solutions tailored
+                to our clients' needs.
+            </p>
+
+            <!-- Sang Hospitality -->
+            <h3>Sang Hospitality</h3>
+            <p>
+                Collaborating with Sang Hospitality, we provide innovative solutions for the hospitality industry,
+                including client meetings, customer approaching strategies, and tailored software solutions.
+            </p>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio">
+            <h2>Portfolio</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300" alt="Project 1">
+                    <h3>Ezivera Website</h3>
+                    <p>Developed the official website for Ezivera Technologies.</p>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300" alt="Project 2">
+                    <h3>GC Software</h3>
+                    <p>Created a website and app for GC Software.</p>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300" alt="Project 3">
+                    <h3>Sang Hospitality</h3>
+                    <p>Developed solutions for client meetings and customer approaching.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>Contact: +91-8789109851 | Email: gauravkumarbgs1947@gmail.com</p>
+        </footer>
+    </div>
+</body>
+
+</html>
